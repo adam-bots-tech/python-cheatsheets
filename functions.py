@@ -69,3 +69,29 @@ from modules import *
 
 #All functions can be imported from a module into the script's namespace
 make_pizza(16, 'cheese', 'sausage', 'pepperoni')
+
+#Call Stack Example
+def a():
+	print('a() starts')
+	b()
+	d()
+	print('a() returns')
+
+def b():
+	print('b() starts')
+	c()
+	print('b() returns')
+
+def c():
+	print('c() starts')
+	print('c() returns')
+
+def d():
+	print('d() starts')
+	print('d() returns')
+
+a()
+
+#End program early
+import sys
+sys.exit()

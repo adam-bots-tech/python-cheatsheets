@@ -65,3 +65,38 @@ print(bicycles)
 #List length
 print(len(bicycles))
 #2
+
+#Multiple assignment of list values to variables
+cat = ['fat', 'gray', 'loud']
+size, color, disposition = cat
+print(size)
+print(color)
+print(disposition)
+
+#Enumerating a list
+for index, item in enumerate(cat):
+	print(index)
+	print(item)
+
+#Get a random value
+import random
+print(random.choice(cat))
+
+#Randomly sort the list
+random.shuffle(cat)
+print(cat)
+
+#Convert back and forth to immutable tuple
+t = tuple(cat)
+print(t)
+l = list(t)
+print(l)
+
+#Copy vs Deep Copy - Deep copy does inner lists. These methods create a new reference, so they can be changed
+#independently of each other
+c = [['fat', 'loud'], 1, 2]
+import copy
+c2 = copy.copy(c)
+c2.append(3)
+print(c)
+print(c2)

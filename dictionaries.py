@@ -29,9 +29,16 @@ alien_new = {
 }
 print(alien_new)
 
+#Pretty printing
+import pprint
+pprint.pprint(alien_new)
+
 #Using a default value if key not found
 point_value = alien.get('points', 5)
 print(point_value)
+
+alien.setdefault('points', 5)
+print(alien.get('points'))
 
 #Looping
 for key,value in alien_new.items():
